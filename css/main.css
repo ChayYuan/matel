@@ -1,3 +1,58 @@
+/*--------------------reset CSS--------------------*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video, input{
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+a{ 
+	text-decoration:none; 
+	cursor:pointer;
+}
+a:hover{ 
+	text-decoration:none; 
+}
+ol,ul{ 
+	list-style:none; 
+	list-style-image:none;
+}
+blockquote,q{ 
+	quotes:none; 
+} 
+ins{ 
+	text-decoration:none; 
+}
+del{ 
+	text-decoration:line-through; 
+}
+h1,h2,h3,h4{ 
+	font-weight:normal; 
+	font-style:normal;
+}
+em{
+	font-weight:normal;
+	font-style:normal;
+}
+li{ 
+	list-style:none; 
+}
+input:focus, textarea:focus, select:focus, button:focus{
+	outline:none;
+}
 body{
 	position:relative;
 	color:#333;
@@ -82,7 +137,20 @@ input.form-control{
 	color:#ffe8c3;
 	font-size:16px;
 	background: #674a2a;
-    /* background: -webkit-linear-gradient(top left, #674a2a 0%, #674a2a 100%); */
+}
+.main-content .screen{
+	position:fixed;
+	right:20px;
+	bottom:20px;
+	/* width:100px; */
+	padding:6px 8px;
+	color:#fff;
+	font-size:16px;
+	border-radius:3px;
+	box-shadow:0 0 4px 0 rgba(0,0,0,0.4);
+	background: #ddac69;
+    background: -webkit-linear-gradient(top left, #ddac69 0%, #e6c389 100%);
+    background: linear-gradient(to bottom right, #ddac69 0%, #e6c389 100%);
 }
 .project-content{
 	width:100%;
@@ -93,7 +161,7 @@ input.form-control{
 	display:block;
 	position:relative;
 	width:1200px;
-	margin:140px auto;
+	margin:200px auto;
 	box-sizing:border-box;
 }
 .project-content ul li{
@@ -125,30 +193,36 @@ input.form-control{
     left:960px;
 }
 .project-content ul li:nth-child(6) {
-    top:190px;
+    top:240px;
     left:0;
 }
 .project-content ul li:nth-child(7) {
-    top:130px;
+    top:180px;
     left:240px;
 }
 .project-content ul li:nth-child(8) {
-    top:190px;
+    top:240px;
     left:480px;
 }
 .project-content ul li:nth-child(9) {
-    top:130px;
+    top:180px;
     left:720px;
 }
 .project-content ul li:nth-child(10) {
-	top:190px;
+	top:240px;
     left:960px;
 }
 .project-content ul li a{
+    display: block;
+	width:80%;
+	margin:23px auto 0 auto;
 	color:#333;
 	font-size:14px;
 	font-weight:bold;
-	line-height:67px;
+	line-height:18px;
+}
+.project-content ul li:nth-child(9) a, .project-content ul li:nth-child(10) a{
+	margin-top:15px;
 }
 /*--------------------detail CSS----------------------*/
 .msg-content{
@@ -161,7 +235,7 @@ input.form-control{
 	float:left;
 	position:relative;
 	width:65%;
-	height:auto;
+	min-height:400px;
 	padding:20px 10px 50px 10px;
 	border:2px solid #e6c389;
 	box-sizing:border-box;
@@ -205,11 +279,12 @@ input.form-control{
 }
 .msgBox h2{
 	font-size:20px;
-    padding:30px 0px;
+    padding:0px;
 }
 .msgBox .msg-cons{
 	width:100%;
 	padding:15px 0;
+	margin: 20px 0;
 	border-top:1px solid #e6c389;
 	border-bottom:1px solid #e6c389;
 	box-sizing:border-box;
@@ -219,7 +294,7 @@ input.form-control{
 	line-height:20px;
 }
 .msgBox p.msg-describe{
-	padding:25px 0;
+	margin-bottom: 10px;
 	font-size:14px;
 	line-height:18px;
 }
